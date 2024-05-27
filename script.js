@@ -947,9 +947,16 @@ document.getElementById("emp-lang-select").addEventListener("change", function()
     populateLocations(); // Initial population based on default selected language
 });
 
- 
+var selectedJobType; // Declare selectedJobType globally
+var bmsId; // Declare bmsId globally 
 // Assume this is called on page load to populate the initial dropdowns
+
+var selectedJobType; // Declare selectedJobType globally
+var bmsId; // Declare bmsId globally 
+
 populateLocations();
+
+
     // Function to proceed to Step 2
     function nextStep() {
         var bmsId = document.getElementById("bms-id").value;
@@ -962,48 +969,58 @@ populateLocations();
             alert("Please enter a valid BMS ID (numbers only).");
             return;
         }
+        
+        
         // Generate referral link
-    var referralLink = jobOffersReferralLinks[selectedJobType] + bmsId;
-    
-    // Display link and generate QR code
-    document.getElementById("generated-link").innerHTML = `<a href="${referralLink}" target="_blank">${referralLink}</a>`;
-    generateQrCode(referralLink);
-    
-        // Hide Step 1 and show Step 2
-        document.getElementById("step1").style.display = "none";
-        document.getElementById("step2").style.display = "block";
-    }
-    document.getElementById("share-button-whatsapp").addEventListener("click", function() {
-         const message = "We are happy to have you with us. Check out this link: " ;
-        const whatsappLink = `https://api.whatsapp.com/send?text=${encodeURIComponent(referralLink)}`;
-        window.open(whatsappLink, "_blank");
-    });
-    document.getElementById("share-button-line").addEventListener("click", function() {
-        const message = "Your message here"; // Replace with the message you want to share
-        const lineLink = `https://line.me/R/msg/text/?${encodeURIComponent(message)}`;
-        window.open(lineLink, "_blank");
-    });
+        var referralLink = jobOffersReferralLinks[selectedJobType] + bmsId;
 
+// Display link and generate QR code
+document.getElementById("generated-link").innerHTML = `<a href="${referralLink}" target="_blank">${referralLink}</a>`;
+generateQrCode(referralLink);
+
+// Hide Step 1 and show Step 2
+document.getElementById("step1").style.display = "none";
+document.getElementById("step2").style.display = "block";
+
+// Share button for WhatsApp
+document.getElementById("share-button-whatsapp").addEventListener("click", function() {
+    const message = "🌟 Exciting news! Join our amazing team at Teleperformance! 🌟 We're expanding our family and want you to be a part of it. Click the link below to start your new journey :"; // Replace with the message you want to share
+const message2 ="Let's grow together! 🚀 #JoinTheTeam";
+    const whatsappLink = `https://api.whatsapp.com/send?text=${encodeURIComponent(message + ""+  referralLink + ""+message2)}`;
+    window.open(whatsappLink, "_blank");
+});
+
+// Share button for Line
+document.getElementById("share-button-line").addEventListener("click", function() {
+    const message = "🌟 Exciting news! Join our amazing team at Teleperformance! 🌟 We're expanding our family and want you to be a part of it. Click the link below to start your new journey :"; // Replace with the message you want to share
+    const message2 ="Let's grow together! 🚀 #JoinTheTeam";
     
-    document.getElementById("share-button-Wechat").addEventListener("click", function() {
-        const message = "Your message here"; // Replace with the message you want to share
-        const lineLink = `https://line.me/R/msg/text/?${encodeURIComponent(message)}`;
-        window.open(lineLink, "_blank");
-    });
-    
-    // Function to generate QR code for the link
-    function generateQrCode(link) {
-        const qrImg = document.getElementById('qrImg');
-        const qrBox = document.getElementById('qrBox');
-    
-        // Construct the URL for the qrserver.com API
-        const apiUrl = `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${encodeURIComponent(link)}`;
-    
-        // Generating image
-        qrImg.src = apiUrl;
-        qrBox.setAttribute("id", "qrBoxGenerated");
+    const lineLink = `https://line.me/R/msg/text/?${encodeURIComponent(message + ""+  referralLink + ""+message2)}`;
+    window.open(lineLink, "_blank");
+});
+
+// Share button for Wechat
+document.getElementById("share-button-Wechat").addEventListener("click", function() {
+    const message = "🌟 Exciting news! Join our amazing team at Teleperformance! 🌟 We're expanding our family and want you to be a part of it. Click the link below to start your new journey :"; // Replace with the message you want to share
+    const message2 ="Let's grow together! 🚀 #JoinTheTeam";
+     const lineLink = `https://wechat.me/R/msg/text/?${encodeURIComponent(message + ""+  referralLink + ""+message2)}`;
+    window.open(lineLink, "_blank");
+});
+ 
+// Function to generate QR code for the link
+function generateQrCode(link) {
+    const qrImg = document.getElementById('qrImg');
+    const qrBox = document.getElementById('qrBox');
+    // Add code to generate QR code here if needed
+
+    // Construct the URL for the qrserver.com API
+    const apiUrl = `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${encodeURIComponent(link)}`;
+
+    // Generating image
+    qrImg.src = apiUrl;
+    qrBox.setAttribute("id", "qrBoxGenerated");
+}
     }
-    
     // Call populateLocations when language selection changes
     document.getElementById("language-select").addEventListener("change", populateLocations);
     
