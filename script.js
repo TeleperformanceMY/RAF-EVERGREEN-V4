@@ -183,13 +183,7 @@ const languageData = {
  
 
 
-  Cloud_Campus:{
-    locations: ['Penang', 'KL', 'Work-From-Home'],
-    jobTypes: {
-        
-        'Work-From-Home': ['IN-KR-WFH', 'IN-JP-WFH','IN-JP-WFH','IN-TH-WFH', 'IN-EN-WFH', 'IN-MN-WFH']
-    }
-  },
+  
     korean: {
         locations: ['Penang'],
         jobTypes: {
@@ -213,7 +207,7 @@ const languageData = {
         }
     },
  
-    other: {
+    Indonesian: {
         locations: ['Penang'],
         jobTypes: {
             'Penang':  ['CSS-BI-PE','CM-BI-PE']
@@ -221,13 +215,19 @@ const languageData = {
         }
         
     },
-    
-  
+ 
     english: {
         locations: ['Penang'],
         jobTypes: {
             'Penang': ['CSS-EN-PE','CM-EN-PE' ],
             
+    }
+},
+mandarin: {
+    locations: ['Penang', 'KL', 'Work-From-Home'],
+    jobTypes: {
+        'Penang': ['CSS-MN-PE' ],
+       
     }
 }
     
@@ -272,7 +272,7 @@ const jobOffersReferralLinks = {
     'ISR-EN-PE': 'https://careerseng-teleperformance.icims.com/jobs/49404/inbound-sales-representative---english---penang/job?mode=job&iis=RAF&iisn=',
     'IN-EN-WFH': 'https://careerseng-teleperformance.icims.com/jobs/49407/interpreter---english---work-from-home/job?mode=job&iis=RAF&iisn=',
     'CSS-MN-KL': 'https://careerseng-teleperformance.icims.com/jobs/49438/customer-success-specialist---mandarin---kl/job?mode=job&iis=RAF&iisn=',
-    'CSS-MN-PE': 'https://careerseng-teleperformance.icims.com/jobs/49435/customer-success-specialist---mandarin---penang/job?mode=job&iis=RAF&iisn=',
+    'CSS-MN-PE': 'https://careerseng-teleperformance.icims.com/jobs/37277/customer-success-specialist---mandarin/?mode=job&iis=RAF&iisn=',
     'AML-MN-KL': 'https://careerseng-teleperformance.icims.com/jobs/49479/anti-money-laundering-%28aml%29---mandarin---kl/job?mode=job&iis=RAF&iisn=',
     'AML-MN-PE': 'https://careerseng-teleperformance.icims.com/jobs/49477/anti-money-laundering-%28aml%29---mandarin---penang/job?mode=job&iis=RAF&iisn=',
     'CM-MN-KL': 'https://career5.ngteleperformance.icims.com/jobs/49580/content-moderator---mandarin---kl/job?mode=job&iis=RAF&iisn=',
@@ -674,7 +674,7 @@ const jobTitles = {
         other: 'Interpreter - Khmer - Work-From-Home'
     },
     'ServiceAdvisor-Indonesian-Penang': {
-        other: 'Service Advisor - Indonesian - Penang'
+        Indonesian: 'Service Advisor - Indonesian - Penang'
     },
 
     'CSS-Lao-Penang': {
@@ -790,11 +790,11 @@ const jobTitles = {
         other: 'Inbound Sales Representative - Taiwanese - KL'
     },
     'CSS-BI-PE':{
-        other: 'Customer Success Specialist - Bahasa Indonesia - Penang'
+        Indonesian: 'Customer Success Specialist - Bahasa Indonesia - Penang'
     },
 
     'CM-BI-PE':{
-        other: 'Content Moderator - Bahasa Indonesia - Penang'
+        Indonesian: 'Content Moderator - Bahasa Indonesia - Penang'
 
     },
 
@@ -974,12 +974,18 @@ populateLocations();
         document.getElementById("step2").style.display = "block";
     }
     document.getElementById("share-button-whatsapp").addEventListener("click", function() {
-        const message = "Your message here"; // Replace with the message you want to share
-        const whatsappLink = `https://api.whatsapp.com/send?text=${encodeURIComponent(message)}`;
+         const message = "We are happy to have you with us. Check out this link: " ;
+        const whatsappLink = `https://api.whatsapp.com/send?text=${encodeURIComponent(referralLink)}`;
         window.open(whatsappLink, "_blank");
     });
-    
     document.getElementById("share-button-line").addEventListener("click", function() {
+        const message = "Your message here"; // Replace with the message you want to share
+        const lineLink = `https://line.me/R/msg/text/?${encodeURIComponent(message)}`;
+        window.open(lineLink, "_blank");
+    });
+
+    
+    document.getElementById("share-button-Wechat").addEventListener("click", function() {
         const message = "Your message here"; // Replace with the message you want to share
         const lineLink = `https://line.me/R/msg/text/?${encodeURIComponent(message)}`;
         window.open(lineLink, "_blank");
