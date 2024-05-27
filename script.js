@@ -224,7 +224,7 @@ const languageData = {
     }
 },
 mandarin: {
-    locations: ['Penang', 'KL', 'Work-From-Home'],
+    locations: ['Penang'],
     jobTypes: {
         'Penang': ['CSS-MN-PE' ],
        
