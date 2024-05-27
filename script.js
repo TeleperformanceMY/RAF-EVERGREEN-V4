@@ -224,7 +224,7 @@ const languageData = {
     }
 },
 mandarin: {
-    locations: ['Penang'],
+    locations: ['Penang', 'KL', 'Work-From-Home'],
     jobTypes: {
         'Penang': ['CSS-MN-PE' ],
        
@@ -259,8 +259,9 @@ const jobOffersReferralLinks = {
     'IN-JP-WFH': 'https://careerseng-teleperformance.icims.com/jobs/49545/interpreter---japanese---work-from-home/job?mode=job&iis=RAF&iisn=',
      'SA-MY-PE': 'https://career5.ngteleperformance.icims.com/jobs/42690/service-advisor---malay---penang/job?mode=job&iis=RAF&iisn=',
     'ASA-MY-PE': 'https://career5.ngteleperformance.icims.com/jobs/42693/assisted-sales-advisor---malay---penang/job?mode=job&iis=RAF&iisn=',
+ 
     'CSS-EN-KL': 'https://careerseng-teleperformance.icims.com/jobs/49424/customer-success-specialist---english---kl/job?mode=job&iis=RAF&iisn=',
-    'CSS-EN-PE': '						 https://careerseng-teleperformance.icims.com/jobs/49399/content-moderator---english---penang/job?mode=job&iis=RAF&iisn=',
+    'CSS-EN-PE': '						https://careerseng-teleperformance.icims.com/jobs/49423/customer-success-specialist---thai---penang/job?mode=job&iis=RAF&iisn=',
     'AML-EN-KL': 'https://careerseng-teleperformance.icims.com/jobs/49255/anti-money-laundering-%28aml%29---english---kl/job?mode=job&iis=RAF&iisn=',
     'AML-EN-PE': 'https://careerseng-teleperformance.icims.com/jobs/49256/anti-money-laundering-%28aml%29---english---penang/job?mode=job&iis=RAF&iisn=',
     'CM-EN-KL': 'https://careerseng-teleperformance.icims.com/jobs/49401/content-moderator---english---kl/job?mode=job&iis=RAF&iisn=',
