@@ -180,7 +180,12 @@ function updatePageContent(language) {
 
 const languageData = {
 
- 
+    Tagalog:{
+        locations: ['Penang'],
+        jobTypes: {
+            'Penang': ['CSS-TG-PE'],
+        }
+    },
 
 
   
@@ -234,6 +239,8 @@ mandarin: {
 };
  
 const jobOffersReferralLinks = {
+'CSS-TG-PE': 'https://careerseng-teleperformance.icims.com/jobs/49426/customer-success-specialist---tagalog---penang/job?mode=job&iis=RAF&iisn=',
+
     'CSS-KR-PE': 'https://careerseng-teleperformance.icims.com/jobs/49422/customer-success-specialist---korean---penang/job?mode=job&iis=RAF&iisn=',
     'CSS-KR-KL': 'https://careerseng-teleperformance.icims.com/jobs/49427/customer-success-specialist---korean---kl/job?mode=job&iis=RAF&iisn=',
     'AML-KR-PE': 'https://careerseng-teleperformance.icims.com/jobs/49452/anti-money-laundering-%28aml%29---korean---penang/job?mode=job&iis=RAF&iisn=',
@@ -407,7 +414,11 @@ document.getElementById("emp-lang-select").addEventListener("change", function()
 // Simulated job titles object
 
 const jobTitles = { 
- 
+
+ 'CSS-TG-PE': {Tagalog:'Customer Success Specialist - Tagalog - Penang'
+
+ },
+
     'CSS-KR-PE': {
         korean: 'Customer Success Specialist - Korean - Penang',
      },
