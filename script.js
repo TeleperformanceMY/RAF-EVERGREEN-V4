@@ -268,7 +268,7 @@ const jobOffersReferralLinks = {
     'ASA-MY-PE': 'https://career5.ngteleperformance.icims.com/jobs/42693/assisted-sales-advisor---malay---penang/job?mode=job&iis=RAF&iisn=',
  
     'CSS-EN-KL': 'https://careerseng-teleperformance.icims.com/jobs/49424/customer-success-specialist---english---kl/job?mode=job&iis=RAF&iisn=',
-    'CSS-EN-PE': '						https://careerseng-teleperformance.icims.com/jobs/49423/customer-success-specialist---thai---penang/job?mode=job&iis=RAF&iisn=',
+    'CSS-EN-PE': 'https://careerseng-teleperformance.icims.com/jobs/49253/customer-success-specialist---english---penang/job?mode=job&iis=RAF&iisn=',
     'AML-EN-KL': 'https://careerseng-teleperformance.icims.com/jobs/49255/anti-money-laundering-%28aml%29---english---kl/job?mode=job&iis=RAF&iisn=',
     'AML-EN-PE': 'https://careerseng-teleperformance.icims.com/jobs/49256/anti-money-laundering-%28aml%29---english---penang/job?mode=job&iis=RAF&iisn=',
     'CM-EN-KL': 'https://careerseng-teleperformance.icims.com/jobs/49401/content-moderator---english---kl/job?mode=job&iis=RAF&iisn=',
